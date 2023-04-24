@@ -19,7 +19,7 @@ jobs:
       - run: npm ci #cf. https://docs.npmjs.com/cli/v9/commands/npm-ci
       - run: npm run test
 
-  # Build and publish the Docker image to the GCP Artifact Registry
+  # Build and publish the Docker image to the GCP Artifact Registrye
   build-publish:
     needs: test
     runs-on: ubuntu-latest
