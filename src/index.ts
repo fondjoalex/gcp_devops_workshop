@@ -25,5 +25,19 @@ export const server = API.listen(8080, () => {
   console.log("server started on port 8080");
 });
 
+API.get(
+  "/log", 
+  (req: Request, res: Response) => {
+    console.info("api is logging something");
+    console.log("api is judtt logging");
+    console.info(
+      JSON.stringify({
+        msg: "api is logging structured info",
+          some_key: "some_value",
+      })
+    )
+  }
+);
+
 export default API;
 
